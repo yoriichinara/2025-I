@@ -1,0 +1,23 @@
+\section*{Adherencia e Interior}
+
+\begin{definition}
+    \emph{Adherencia.} Para \(A\subset X\) sea \(\F = \{ F^\ce\subset X : A\subset F\}\), definimos \(\displaystyle \overline{A} := \bigcap \F\). 
+\end{definition}
+\begin{proposition}
+    \((a) \ A\subset \overline{A};  \ (b) \ \overline{\overline{A}} = \overline{A}; \ (c)\ \overline{\emptyset}=\emptyset;  \ (d)\ \overline{A\cup B} = \overline{A}\cup \overline{B};  \ (e) \ A^\ce \Leftrightarrow A = \overline{A}\). 
+\end{proposition}
+\begin{note}
+    Sea \(f:\wp(X)\to\wp(X)\) tal que \(A\mapsto \overline{A}\) y \(\F := \{A\subset X: A = \overline{A}\}\). Si la familia \(\F\) verifica las propiedades en la proposición anterior, entonces \(\F\) define los cerrados de una topología \(\tau\) sobre \(X\). 
+\end{note}
+\begin{definition}
+    \emph{Interior.} Para \(A\subset X\) sea \(\U=\{U^\ab\subset X: U \subset A\}\), definimos \(\displaystyle \overset{\circ}{A} := \bigcup \U\).  
+\end{definition}
+\begin{proposition}
+    \(X\backslash \overline{A} = \overset{\circ}{\wideparen{X\backslash A}}\) \ \ y\ \ \(X\backslash \overset{\circ}{A}= \overline{X\backslash A}\). Hint: De Morgan.  
+\end{proposition}
+\begin{proposition}
+    \((a) \ \overset{\circ}{A}\subset A; \  (b) \ \overset{\circ\circ}{A} = \overset{\circ}{A}; \ (c)\ \overset{\circ}{X}=X; \ (d)\ \overset{\circ}{\wideparen{A\cap B}} = \overset{\circ}{A}\cap \overset{\circ}{B}; \  (e) \ A^\ab \Leftrightarrow A = \overset{\circ}{A}\). 
+\end{proposition}
+\begin{note}
+    De nuevo, una familia \(\U := \{A\subset X: A = \overset{\circ}{A}\}\) que verifique las propiedades anteriores define los abiertos de una topología \(\tau\) sobre \(X\). 
+\end{note}

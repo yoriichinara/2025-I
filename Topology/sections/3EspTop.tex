@@ -1,0 +1,35 @@
+\section*{Espacios Topológicos}
+
+\begin{definition}
+    \emph{Espacio Topológico.} Sea \(X\) un conjunto. Una topología en \(X\) es un conjunto \(\tau \subseteq \wp(X)\) que verifica:  
+    \begin{itemize}
+        \item \(\emptyset,X\in \tau\). 
+        \item Si \(A_i \in \tau\) entonces \( \bigcup A_i \in \tau\). \hfill \(A\in \tau\) es abierto
+        \item Si \(A_k \in \tau\) con \(|k|<\infty \) entonces \(\bigcap A_k\in \tau\). 
+    \end{itemize}
+\end{definition}
+
+\E
+
+\hrule 
+\begin{example}
+    El conjunto de abiertos de un espacio métrico es una topología \(\tau_d\) para \(X\). Caso de la topología usual \(\tau_{d_2}\)  para \(\R^n\) dada por los abiertos de la métrica euclidiana. 
+\end{example}
+\begin{example}
+    La topología discreta \(\tau_{\text{\tiny T}}= \wp(X)\) y la topología trivial \(\tau_0 = \{\emptyset, X\}\). 
+\end{example}
+\hrule
+
+\E 
+
+\begin{definition}
+    \((X,\tau)\) es metrizable sii una métrica \(d\) tal que \(\tau = \tau_d\). 
+\end{definition}
+
+\begin{definition}
+    Sean \(\tau_1,\tau_2\) dos topogías para \(X\). Si \(\tau_1\subset \tau_2\) entonces \(\tau_2\) es mas fina-fuerte que \(\tau_1\). 
+\end{definition}
+
+\begin{note}
+    Acá de nuevo los cerrados se definen como complementos de abiertos y existe también la definición en términos de conjuntos cerrados. 
+\end{note}

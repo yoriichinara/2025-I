@@ -1,0 +1,39 @@
+\section*{Teoremas de Hahn-Banach}
+
+\begin{proposition}
+    \emph{Lemma de Zorn.} Todo conjunto parcialmente ordenado, no vacío y en el cual todo subconjunto totalmente ordenado tiene cota superior, tiene un elemento máximal. 
+\end{proposition}
+
+\E
+
+\hrule
+\begin{exercise}
+    Lemma de Zorn \(\Leftrightarrow \) Axioma de Elección. 
+\end{exercise}
+\hrule 
+
+\E
+
+%\begin{theorem}
+%    \emph{Hanh-Banach (en \(\R\)).} Sean \(E\) un espacio (sobre \(\R\)) normado y \(p:E\to \R\) una función tal que, 
+%    \begin{itemize}
+%        \item \(\forall a>0,\forall x\in E\) se tiene \(p(ax) = ap(x)\). 
+%        \item \(\forall x,y\in E\) su cumple \(p(x+y) \leq p(x)+p(y)\). 
+%    \end{itemize} 
+%    Sean tambien \(G\leq E \) y \(\varphi : G \to \R\) un operador lineal tal que \(\forall x\in G \text{ se tiene }\varphi(x)\leq p(x)\). Entonces \(\exists \overset{\sim }{\varphi} : E \to \R\) lineal que extiende a \(\varphi\), es decir, \(\overset{\sim }{\varphi}(x)\Big|_{G} = \varphi(x) \) y que además satisface \(\forall x\in E \text{ que }\overset{\sim}{\varphi}(x)\leq p(x)\). 
+%\end{theorem}
+\begin{theorem}
+    \emph{Hanh-Banach (en \(\K\)).} Sean \(E\) un espacio (sobre \(\K\)) normado y \(p:E\to \R\) una función tal que, 
+    \begin{itemize}
+        \item \(\forall a>0,\forall x\in E\) se tiene \(p(ax) = |a|p(x)\). 
+        \item \(\forall x,y\in E\) su cumple \(p(x+y) \leq p(x)+p(y)\). 
+    \end{itemize} 
+    Si \(G\leq E \) y \(\varphi : G \to \K\) es un operador lineal tal que \(\forall x\in G \text{ se tiene }|\varphi(x)|\leq p(x)\), entonces \(\exists \overset{\sim }{\varphi} : E \to \K\) lineal que extiende a \(\varphi\), es decir, \(\overset{\sim }{\varphi}(x)\Big|_{G} = \varphi(x) \) y que además satisface \(\forall x\in E \text{ que }|\overset{\sim}{\varphi}(x)|\leq p(x)\). 
+\end{theorem}
+\begin{note}
+    \emph{Colorario(s).} \begin{itemize}
+        \item Si \(\varphi \) es continuo entonces \(\overset{\sim}{\varphi}\) también y \(\|\varphi\| = \|\overset{\sim}{\varphi}\|\). 
+        \item Si \(E\) es un espacio normado entonces \(\forall x_0\in E \setminus \{0\},\exists \varphi\in E'\) tal que \(\|\varphi\| = 1\) y \(\varphi(x_0) = \|x_0\|\). 
+        \item Si \(E\neq \{0\}\) y \(x\in E \) entonces \(\|x\| = \sup\{ |\varphi(x)|: \varphi \in E' \text{ y } \|x\|\in B_E\} \) cuyo valor alcanza.   
+    \end{itemize}
+\end{note}

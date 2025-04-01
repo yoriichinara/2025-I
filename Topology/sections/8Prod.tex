@@ -1,0 +1,52 @@
+\section*{Topología Producto}
+
+\begin{definition}
+    Para una familia \(\{X_i\}_{i\in I }\) no vacía, su \emph{producto cartesiano} es \(\prod X_i = \{(x_i) : x_{i} \in X_i\} \). Para cada \(j\in I\) la proyección \(\pi_j: x \in \prod X_i \mapsto x_j\in  X_j\).  
+\end{definition}
+\begin{note}
+    No hay garantía de \(\prod X_i \neq \emptyset\) en el caso de que \(|I| = \infty\), se hace necesario el axioma de elección. 
+\end{note}
+\begin{definition}
+    \emph{Axioma de Elección.} Sea \(\mathcal{A}= \{X_i\}\) familia no vacía de conjuntos disjuntos no vacíos, entonces \(\exists f, \forall i\in I,\) tal que \(f:I\to \bigcup X_i \) envia \(i\mapsto f(i) \in X_i\).   
+\end{definition}
+\begin{proposition}
+    Si \(\{X_i\} \neq \emptyset\) con \(X_i\neq \emptyset \), entonces \(\prod X_i \neq \emptyset \).  
+\end{proposition}
+\begin{proposition}
+    Sean \(X_i\) espacios topológicos y \(X = \prod X_i\). El conjunto \(\B = \left\{\prod U_i: U_i^\ab \subset X_i\right\}\) es base para una una topología sobre \(X\) que llamamos \emph{topología de cajas}. 
+\end{proposition}
+
+\E
+
+\hrule 
+\begin{example}
+    Sea \(I=\{1, 2, \ldots, n\}\) e \(X_i = \R\) para cada \(i\in I\), entonces \(\prod X_i\) es la topología usual en \(\R^n\). 
+\end{example}
+\hrule 
+
+\E
+
+\begin{note}
+    La topología de cajas resulta inconveniente en conjuntos de indices infinitos. 
+\end{note}
+\begin{proposition}
+    Sean \(X=\prod X_i\) y \(\B = \prod U_i\) tales que \((a) \ U_i^\ab\subset X_i\) y \((b) \ \forall J\subset I\text{ finito }, \forall i \in I\setminus J \text{ se tiene } U_i = X_i \), entonces \(\B\) es base para de una topología llamada \emph{topología producto} sobre \(X\).  
+\end{proposition}
+\begin{proposition}
+    La topología producto en la más fina en \(X\) tal que todas las proyecciones \(\pi_j:X\to X_j\) son continuas. 
+\end{proposition}
+\begin{proposition}
+    Sean \(X = \prod X_i\) y \(Y\) espacios topológicos y \(g:X\to Y\) una función, entonces \(g\) es continua sii \(\forall j\in I\), se tiene \( \pi_j\circ g: Y \to X_j\) es continua. 
+\end{proposition}
+\begin{proposition}
+    Sean \(X\) conjunto, \(\{X_i\}\) familia no vacía de espacios topológicos e \(\forall i \in I\) sea \(f_i:X\to X_i\). Sea también \(\B = \left\{\bigcap f_j^{-1}(U_j): J\text{ es finito y } \U_j^\ab\subset X_j\right\}\), entonces \((a) \ \B\) es base de una topología \(\tau_w\) en \(X\); \((b)\ \tau_w\) es la topología más fina tal que \(f_i\) es continua; \((c)\) Si \(Y\) es espacio topológico, entonces \(g:Y\to X\) es continua sii \(\forall i\in I\) la función \(f_i\circ g: Y \to X_i\) es continua \footnote{\(\tau_w\) es la topología más fina definida por la familia de funciones \(\{f_i\}\).}. 
+\end{proposition}
+\begin{proposition}
+    Sean \(X\) el espacio topológico definido por las \(\{f_i\}\) y \(S\leq X \), entonces \(S\) tiene la topológia más fina definida por la familia \(f_i|_S: S\to X_i\). 
+\end{proposition}
+\begin{definition}
+    La familia \(\{f_i\}\) separa puntos en \(X\) si \(\forall x\neq y \in X, \exists i\in I\) tal que \(f_i(x)\neq f_i(y)\).  
+\end{definition}
+\begin{proposition}
+    \(\forall i \in I\) sean \(f_i:X\to X_i\) funciones entre espacios topológicos. Considere \(\epsilon : x\in X \rightarrow (f_i(x)) \in \prod X_i\), entonces \(\epsilon \) es una inmersión sii verifica \((a)\ \{f_i\} \) separa puntos en \(X\) y \((b)\ X\) tiene la topología más fina definida por \(\{f_i\}\) \footnote{A la función \(\epsilon\) se le conoce como \emph{evaluación}}. 
+\end{proposition}

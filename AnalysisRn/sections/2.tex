@@ -1,0 +1,73 @@
+\section*{Aula 11/03/25}
+
+\begin{definition}
+    \textit{Derivadas de orden superior.} Sea \(f: U^{ab}\subseteq \R^n \rightarrow\). Si existe \(\frac{\partial f }{\partial x_i}(p)\) para cada \(p\in U\) podemos definir \(\frac{\partial f}{\partial x_i}: U \rightarrow \R\) y considerar la \emph{derivada de segundo orden}
+    \[\frac{\partial^2 f}{\partial x_j \partial x_i}(p) := \frac{\partial}{\partial x_j}\left(\frac{\partial f}{\partial x_i}\right)(p).\]
+\end{definition}
+
+\begin{note}
+    El orden importa, en general. 
+\end{note}
+
+\begin{definition}
+    Sea \(k\in \{0\}\cup \N \). Decimos que \(f:U\rightarrow \R\) es de clase \(C^k(U)\) si para cada \(m \leq k\) todas las derivadas de orden \(m\) de \(f\) existen y son continuas en \(U\). La función \(f\) es \emph{smooth} en \(U\) si es de clase \(C^\infty(U)\).\footnote{\(C^0(U)\) es la clase de las funciones continuas en \(U\).} 
+\end{definition}
+
+\vspace{0.2in}
+
+\hrule
+\begin{example}
+    Los elementos de \(\R[x_1,\ldots,x_n]\), el anillo de polinomios de \(n\) variables con coeficientes en \(\R\) es de clase \(C^\infty\). 
+\end{example}
+\begin{example}
+    \(\det(T): M_{n\times n}(\R) \cong \R^{n^2}\rightarrow \R\) es de clase \(C^\infty\). 
+\end{example}
+\begin{example}
+    \(x\mapsto x^{1/3}\) es de clase \(C^0\) más no es de clase \(C^1\) en \(0\). 
+\end{example}
+\begin{exercise}
+    Muestre que \(C^k(U)\) es una \(\R\)-álgebra conmutativa, con la suma y el produto usual de funciones. Además de es eso pruebe que 
+    \[C^0(U)\supsetneq C^1(U)\supsetneq \cdots \supsetneq C^\infty(U), \]
+    Y note que los elementos inversos son aquellos que no se anulan. \footnote{Colorario de esto es que las funciones racionales son \(C^\infty(U) \) en dominios donde no se anulan.} 
+\end{exercise}
+\begin{example}
+    \(\displaystyle f(x,y) = \begin{cases}
+        \frac{xy(x^2+y^2)}{x^2+y^2}, \ &\text{si}\ (x,y)\neq 0 \\
+        0, \ &\text{e.o.c.}
+    \end{cases}\). Hint: averigue si esta en \(C^2\)
+\end{example}
+\hrule 
+
+\vspace{0.2in}
+
+\begin{theorem}[Schwarz]
+    \itshape Sea \(f:U^{ab}\subseteq \R^n \rightarrow \R\) una función de clase \(C^2(U)\), entonces para cada \(1\leq i,j\leq n\),  
+    \[\frac{\partial^2 f}{\partial x_i \partial x_j} = \frac{\partial^2 f }{\partial x_j \partial x_i}.\]
+\end{theorem}
+
+\vspace{0.2in}
+
+\hrule 
+\begin{exercise}
+    \emph{Colorario.} Si \(f\in C^k(U)\) entonces no importa el orden en que son tomadas las derivadas de orden \(m\leq k\). 
+\end{exercise}
+\hrule 
+
+\vspace{0.2in}
+
+\begin{definition}
+    \emph{Diferenciabilidad}. Decimos que una función \(f:U^{ab}\subseteq \R^n \rightarrow \R\) es diferenciable en un punto \(p\in U \) si existe un funcional lineal \(\ell : \R^n \rightarrow \R\) tal que 
+    \[f(p+v) = f(p) + \ell\cdot v + \sigma(\|v|\|)\ \text{cuando} \ v\to 0. \]
+\end{definition}
+\begin{proposition}
+    Si \(f\) es diferenciable en \(p\) entonces para cada \(\vec{v_0}\in \R^n\), \(\ell \cdot v = \frac{\partial f }{\partial v}(p)\). En particular \(\ell_i = \frac{\partial f}{\partial x_i}(p)\).\footnote{Esto también implica que las derivadas direccionales son lineales en esa dirección.}
+\end{proposition}
+\begin{definition}
+    \emph{Diferencial.} Si \(f\) es diferenciable en \(p\) el diferencial de \(f\) en \(p\) es una función lineal \(df(p): \R^n \rightarrow \R\) dada por 
+    \[df(p)\cdot v := \sum_{i=1}^n \frac{\partial f}{\partial x_i}(p)\cdot v_i.\]
+\end{definition}
+\begin{note}
+    La existencia de derivadas direccionales sirve para definir \(df(p)\), sin embargo esto no garantiza que sea lineal y aún si lo fuera no es garantía de diferenciabilidad en el punto. 
+\end{note}
+
+\vspace{0.2in}

@@ -1,0 +1,126 @@
+% PROGRAMA DE PÓS-GRADUAÇÃO EM ECONOMIA APLICADA
+% UNIVERSIDADE FEDERAL DO RIO GRANDE - FURG
+
+% ===========================================================
+
+\documentclass[a4paper, 11pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% PACOTES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[margin = 0.5in, bottom = 2in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx} 
+\usepackage{xcolor}
+\usepackage{lipsum}	
+\usepackage{amsfonts,amsmath,amssymb, amsthm} 
+\usepackage{booktabs}
+\usepackage{hyperref}  
+\usepackage{yhmath} 
+\usepackage{tikz}
+
+% Configuração da Fonte
+\usepackage{times} % Fonte: Times New Roman
+
+% PACOTES ESSENCIAIS
+\usepackage{caption}
+\usepackage{subcaption}  
+
+%\setlength{\footskip}{0pt} % Espacio entre texto y pie de página
+\renewcommand{\footnoterule}{\vspace{5pt}\hrule width 0.3\linewidth\vspace{5pt}}
+\setlength{\textheight}{770pt}
+\setlength{\headsep}{10pt}
+\setlength{\topmargin}{-60pt}
+
+\begin{document} %Início do Documento
+
+%\layout
+%\newpage 
+\- \vspace{-0.3in}
+\par\noindent\includegraphics[width = \textwidth]{Imagens/Header.png} 
+
+%%%%%%%%%%%%%%%%%%%%%%%% CONFIG. DO TÍTULO %%%%%%%%%%%%%%%%%%%%%%%%
+%\vspace{-1.8in}
+
+\begin{center} %Inicia a centralização
+\textbf{Topología | 2025-I}    \\ {\small 
+Nestor Heli Aponte Avila\(^1\) \\ 
+\href{mailto:n267452@dac.unicamp.br}{\url{n267452@dac.unicamp.br}}} %\\
+%Prof. Piper Pimienta \\
+%\href{mailto:pipe@dac.unicamp.br}{\url{pipe@dac.unicamp.br}}}
+
+\end{center} %Finaliza a centralização
+
+%%%%%%%%%%%%%%%%%%%%%%%%% PREAMBULO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\theoremstyle{definition}
+\newtheorem*{definition}{\rotatebox{45}{\large \(\square\)}}
+
+\theoremstyle{plain}
+\newtheorem*{lemma}{{\scriptsize \(\square\)}}
+\newtheorem*{proposition}{{\large \(\square\)}}
+\newtheorem*{theorem}{{\large \(\blacksquare\)}}
+
+\makeatletter
+% Eliminar la puntuación del estilo 'plain' y 'definition'
+\def\@thm@headpunct{} % Elimina el punto de los títulos de los teoremas
+
+% Modificar el estilo de 'plain' y 'definition'
+\def\th@plain{%
+  %\thm@headfont{\normalfont\bfseries} % Mantener la fuente normal, sin negrita
+  %\thm@notefont{\normalfont} % El texto de la nota (si la hay) no será en negrita
+  \thm@headpunct{} % Sin puntuación adicional
+}
+
+\def\th@definition{%
+  %\thm@headfont{\normalfont\bfseries} % Fuente normal para el título
+  %\thm@notefont{\normalfont} % El texto de la nota (si la hay) no será en negrita
+  \thm@headpunct{} % Sin puntuación adicional
+}
+
+\def\th@remark{%
+  %\thm@headfont{\normalfont\bfseries} % Fuente normal para el título
+  %\thm@notefont{\normalfont} % El texto de la nota (si la hay) no será en negrita
+  \thm@headpunct{} % Sin puntuación adicional
+}
+\makeatother
+
+\theoremstyle{remark}
+\newtheorem*{example}{Ejemplo}
+\newtheorem*{exercise}{Ejercicio}
+\newtheorem*{note}{\(*\)}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\U}{\mathcal{U}}
+\newcommand{\V}{\mathcal{V}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\E}{\vspace{0.2in}}
+\newcommand{\ab}{{\rotatebox{0}{\scriptsize$\lor$}}}
+\newcommand{\ce}{{\text{\ \large \rotatebox{90}{$\triangleleft$}}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% CONTENIDO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{sections/1Conj.tex}
+\input{sections/2EspMet.tex}
+\input{sections/3EspTop.tex}
+\input{sections/4AdjyInt.tex}
+\input{sections/5Bases.tex}
+\input{sections/6Subespacio.tex}
+\input{sections/7Cont.tex}
+\input{sections/8Prod.tex}
+\input{sections/9Cociente.tex}
+\input{sections/10Redes.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% REFERÊNCIAS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thebibliography}{9}
+
+\bibitem{mujica2005notas}
+Mujica, Jorge (2005). \textit{Notas de topologia geral}. IMECC-UNICAMP, Campinas.
+
+\end{thebibliography}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% APÊNDICES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

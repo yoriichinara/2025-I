@@ -1,0 +1,122 @@
+% PROGRAMA DE PÓS-GRADUAÇÃO EM ECONOMIA APLICADA
+% UNIVERSIDADE FEDERAL DO RIO GRANDE - FURG
+
+% ===========================================================
+
+\documentclass[a4paper, 11pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% PACOTES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[margin = 0.5in, bottom = 1.2in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{lipsum}	
+\usepackage{amsfonts,amsmath,amssymb, amsthm}
+\usepackage{booktabs}
+\usepackage{hyperref} 
+\usepackage{dsfont}
+
+% Configuração da Fonte
+\usepackage{times} % Fonte: Times New Roman
+
+% PACOTES ESSENCIAIS
+\usepackage{caption}  
+
+%\setlength{\footskip}{0pt} % Espacio entre texto y pie de página
+\renewcommand{\footnoterule}{\vspace{5pt}\hrule width 0.3\linewidth\vspace{5pt}}
+\setlength{\textheight}{770pt}
+\setlength{\headsep}{10pt}
+\setlength{\topmargin}{-60pt}
+
+\begin{document} %Início do Documento
+
+%\layout
+%\newpage 
+\-\vspace{-0.3in} 
+
+\par\noindent \includegraphics[width = \textwidth]{Imagens/Header.png} 
+
+%%%%%%%%%%%%%%%%%%%%%%%% CONFIG. DO TÍTULO %%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center} %Inicia a centralização
+{\Large\textbf{Análisis en \(\mathbb{R}^n\)\ \ | \ \  2025-I}} \vspace{0.1in}   \\ {\small
+Nestor Heli Aponte Avila\(^1\) \\ 
+\href{mailto:n267452@dac.unicamp.br}{\url{n267452@dac.unicamp.br}}} %\\
+%Prof. Piper Pimienta \\
+%\href{mailto:pipe@dac.unicamp.br}{\url{pipe@dac.unicamp.br}}}
+
+\end{center} %Finaliza a centralização
+
+%%%%%%%%%%%%%%%%%%%%%%%%%  MEU PREAMBULO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\theoremstyle{definition}
+\newtheorem*{definition}{\rotatebox{45}{\large \(\square\)}}
+
+\theoremstyle{plain}
+\newtheorem*{lemma}{{\scriptsize \(\square\)}}
+\newtheorem*{proposition}{{\large \(\square\)}}
+\newtheorem*{theorem}{{\large \(\blacksquare\)}} 
+
+\makeatletter
+% Eliminar la puntuación del estilo 'plain' y 'definition'
+\def\@thm@headpunct{} % Elimina el punto de los títulos de los teoremas
+
+% Modificar el estilo de 'plain' y 'definition'
+\def\th@plain{%
+  %\thm@headfont{\normalfont\bfseries} % Mantener la fuente normal, sin negrita
+  %\thm@notefont{\normalfont} % El texto de la nota (si la hay) no será en negrita
+  \thm@headpunct{} % Sin puntuación adicional 
+}
+
+\def\th@definition{%
+  %\thm@headfont{\normalfont\bfseries} % Fuente normal para el título
+  %\thm@notefont{\normalfont} % El texto de la nota (si la hay) no será en negrita
+  \thm@headpunct{} % Sin puntuación adicional
+}
+
+\def\th@remark{%
+  %\thm@headfont{\normalfont\bfseries} % Fuente normal para el título
+  %\thm@notefont{\normalfont} % El texto de la nota (si la hay) no será en negrita
+  \thm@headpunct{} % Sin puntuación adicional
+}
+\makeatother
+
+\theoremstyle{remark}
+\newtheorem*{example}{Ejemplo}
+\newtheorem*{exercise}{Ejercicio}
+\newtheorem*{note}{\(*\)}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\vspace{0.2in}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\U}[3]{\(#1 : U^{ab} \subseteq \R^{#2} \rightarrow \R^{#3}\)}
+\newcommand{\ab}{{\rotatebox{0}{\scriptsize$\lor$}}}
+\newcommand{\ce}{{\text{\ \large \rotatebox{90}{$\triangleleft$}}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% CONTENIDO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{sections/1.tex}
+\input{sections/2.tex} 
+\input{sections/3.tex}
+\input{sections/4.tex}
+\input{sections/5.tex}
+\input{sections/6.tex}
+\input{sections/7.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% REFERÊNCIAS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thebibliography}{9}
+
+%\bibitem{martin1966complex}
+%Martin, D. y Ahlfors, L.V. (1966). \textit{Complex Analysis}. New York: McGraw-Hill.
+
+\bibitem{lima2004analise}
+Lima, Elon Lages (2004). \textit{An{\'a}lise real Vol. 2}. IMPA, Rio de Janeiro.
+
+\end{thebibliography}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% APÊNDICES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

@@ -1,0 +1,84 @@
+\section*{Aula 25/03/25}
+
+\begin{definition}
+    Sea \(f:U^\ab\subseteq \R^n \to \R\) diferenciable. Un punto \(p\in U\) es \emph{punto crítico} de \(f\) sii \(df(p)=0=\nabla f(p)\). 
+\end{definition}
+
+\E
+
+\hrule 
+\begin{example}
+    \(f(x,y) = x^2 + 3y^4+ 4y^3 - 12y^2\). Hint: cálcule no sea flojo. 
+\end{example}
+\hrule 
+
+\E
+
+\begin{definition}
+    La función \(f\) tiene un máximo (o mínimo) local en \(p\) si \(f(x) \leq f(p)\) en alguna vecindad de \(p\) \footnote{Más generalmente decimos \emph{extremo local}.}.  
+\end{definition}
+\begin{proposition}
+    Extremo local  \(\Rightarrow \) punto crítico. 
+\end{proposition}
+\begin{note}
+    El objetivo ahora es clasificar como máximo o mínimo o ninguno de los dos. 
+\end{note}
+
+\E
+
+\hrule 
+\begin{example}
+    Sea \(f\) una forma cuadrática con Hessiana diagonal \(H= (\lambda_1, \ldots,\lambda_n)\). En Taylor orden $2$ tenemos \(f(p+v)= f(p) + df(p) + \frac{1}{2}\sum \lambda_i v_i^2 + \sigma(\|v\|^2)\). Entonces \(\lambda_i > 0 \) para cada \(i \Rightarrow \) mínimo local en \(p\); en cambio si \(\lambda_i <0\) para cada \(i \Rightarrow \) máximo local en \(p\). 
+\end{example}
+\hrule 
+
+\E
+
+\begin{definition}
+    Sea \(A = A^T\in M_{n\times n}(\R)\). La forma cuadrática \(f: v\mapsto \langle Av, v\rangle\) es \emph{positiva} si \(f(v)>0\), \emph{negativa} si \(f(v)<0\) para todo \(\vec{v}\in \R^n\setminus \{0\}\) o indefinida e.o.c.
+\end{definition}
+
+\E
+
+\hrule 
+\begin{example}
+    (i) \(v\mapsto \|v\|^2\) -- positiva y (ii) \(v\mapsto t^2-x^2-y^2-z^2\) -- indefinida. 
+\end{example}
+\hrule 
+
+\E
+
+\begin{theorem}
+    Toda matriz símetrica posee base ortonormal de autovectores, es diagonalizable. 
+\end{theorem}
+
+\E
+
+\hrule
+\begin{exercise}
+    Sea \(A=A^T\in M_{n\times n}(\R)\) e \(\lambda_1, \ldots, \lambda_n\) sus autovalores, muestre que \(A\) es positiva (o negativa) si \(\lambda_i>0 \) (o \(\lambda_i <0\)) para cada \(1\leq i\leq n\). 
+\end{exercise}
+\hrule 
+
+\E
+
+\begin{theorem}
+    Sea \(f\) función \(2\)-diff en \(p\in U\) punto crítico. Si \(Hf(p)\) es definida positiva (o negativa) entonces \(p\) es un mínimo (o máximo) isolado local de \(f\) en \(U\). 
+\end{theorem}
+\begin{definition}
+    Un punto crítico \(p\) de \(f\) es punto de silla sii \(Hf(p)\) tiene por lo menos un \(\lambda_i >0\) y un \(\lambda_j<0\). 
+\end{definition}
+\begin{note}
+    Sea \(\lambda_1 > 0 \) y \(\lambda_2<0\) con autovectores \(w_1\) y \( w_2\), entonces \(f\) tiene mínimo local en la dirección de \(w_1\) y máximo local en la dirección de \(w_2\). Hint: \(\langle Hf(p)\cdot v, v\rangle \). 
+\end{note}
+\begin{definition}
+   Un \emph{punto degenerado} es un punto crítico donde la Hessiana es singular, \(Hf(p)= 0\).  
+\end{definition}
+
+\E
+
+\hrule
+\begin{exercise}
+    Sea \(f(x,y)= (y-x^2)(y-2x^2)\). Muestre que \(0\) es un punto degenerado. Muestre que la restricción de \(f\) a cualquier recta que pasa por el origen tiene mínimo local en \(0\) (sin embargo no lo tiene en \(f\)). Hint: considere conjunto donde \(f>0\) y \(f<0\). 
+\end{exercise}
+\hrule 

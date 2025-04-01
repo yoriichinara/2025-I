@@ -1,0 +1,42 @@
+\section*{Aula 20/03/25}
+
+\begin{definition}
+    \(f\) se anula al orden \(k+1\) en \(p\) si \(\partial^\alpha f(p)=0\) para todo \(|\alpha|\leq k\). 
+\end{definition}
+
+\E 
+
+\hrule 
+\begin{exercise}
+    Si \(f(x)= \sum c_\alpha x^\alpha \) se anula identicamente en una vecindad del origen entonces \(c_\alpha = 0\) para cada \(\alpha\). 
+\end{exercise}
+\hrule 
+
+\E
+
+\begin{theorem}
+    Sean \(k\geq 1\) y \(f\) una función \(k\)-diff en \(0\in \R^n\). Si \(f\) se anula al orden \(k+1 \) entonces \(f(v)=\sigma(\|v\|^k)\).
+\end{theorem}
+\begin{proposition}
+    \emph{Colorario.} Para \(p\in\R^n\) tenemos \(f(p+v)= \sum \frac{1}{i!}d^if(p) v^{\otimes i}  + \sigma(\|v\|^k)\). 
+\end{proposition}    
+
+\E
+
+\hrule 
+\begin{exercise}
+    Demuestre el colorario. Hint: \(\Gamma_k(v)= \sigma(\|v\|)\)? 
+\end{exercise}
+\begin{exercise}
+    Fórmula de Taylor infinitesimal de orden 5 de \(f(x,y) = \frac{x}{1+xy}\) en \(0\). Hint: Geometría - Taylor?  
+\end{exercise}
+\begin{exercise}
+    Sea \(f\) función \(k\)-diff. Use la fórmula de Taylor para provar el reves del Teorema, concluya la unicidad. 
+\end{exercise}
+\hrule 
+
+\E 
+
+\begin{proposition}
+    \emph{Resto de Lagrange e Integral.} Sea \(U\subseteq \R^n \) e \(f\in C^{k+1}(U)\), para cada \(p\in U\), \(\vec{v}\in \R^n\) tales que \([p,p+tv]\subseteq U\) tenemos: \((i) \  f(p+v) = T_k(v) + \frac{1}{(k+1)!} d^{k+1}f(p+\theta v) v^{\otimes (k+1)} = \ (ii)\ T_k(v) + \frac{1}{k!} \displaystyle\int_0^1 (1-t)^kd^{k+1}f(p+tv) v^{\otimes (k+1)} dt \). 
+\end{proposition}

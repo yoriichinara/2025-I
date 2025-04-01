@@ -1,0 +1,33 @@
+\section*{Funciones Continuas}
+
+\begin{definition}
+    \(f: X \to Y \) es continua en \(a\in X \) sii \(\forall \overset{\overset{\text{$f(a)$}}{\rotatebox{-90}{$\in$}}}{V^\ab}\subset Y,\exists \overset{\overset{\text{ $a$}}{\rotatebox{-90}{$\in$}}}{U^\ab}\subset X\)  tal que \(f(U) \subset V \). 
+\end{definition}
+\begin{note}
+    Denotamos \(C(X,Y)\) al conjunto de todas las \(f:X\to Y\) continuas, \(C(X)\) si \(Y=\R\). 
+\end{note}
+\newcommand{\B}{\mathcal{B}}
+\begin{proposition}
+   Sean \(\B_a\) y \(\B_{f(a)}\) bases de vecindades. Entonces, son equivalentes: \(f \text{ continua en } a \ \Leftrightarrow\   \forall V \in \V_{f(a)},\exists U \in \U_a\) tal que \(f(U)\subset V\ \Leftrightarrow\ \forall V \in \B_{f(a)}, \exists U \in \B_a\) tal que \(f(U)\subset V\). 
+\end{proposition}
+\begin{proposition}
+   Sea \(f:X\to Y\), son equivalentes: \(f \text{ continua en } a \ \Leftrightarrow\  \forall V^\ab\subset Y \text{ se tiene } f^{-1}(V)^\ab \subset X \  \Leftrightarrow\ \forall F^\ce\subset Y \text{ se tiene }f^{-1}(F)^\ce\subset X \). 
+\end{proposition}
+\begin{proposition}
+    Sean \(f:X\to Y\) continua en \(a\) y \(g:Y\to Z\) continua en \(f(a)\), entonces \(g\circ f:X\to Z\) es continua en \(a\). 
+\end{proposition}
+\begin{proposition}
+    Sean \(f:X\to Y \) continua y \(S\leq X\), entonces \(f|_S\) es continua. 
+\end{proposition}
+\begin{proposition}
+   Sean \(X = S_1\cup S_2\), ambos abiertos y \(f:X\to Y\) tal que \(f|_{S_1}\) y \(f|_{S_2}\) son ambas continuas, entonces \(f\) es continua. 
+\end{proposition}
+\begin{definition}
+    \(f\) es un \emph{homeomorfismo} si \(f\) es biyectiva y ambas \(f\ \text{y}\ f^{-1}\) son continuas. Le llamamos \emph{inmersión} si \(f\) es un homeomorfismo de \(X\) en algún subespacio de \(Y\). 
+\end{definition}
+\begin{definition}
+    \(f\) es \emph{abierta} si \(\forall U^\ab\subset X \text{ se tiene } f(U)^\ab\subset Y \), \emph{cerrada} si \(\forall F^\ce \subset X \text{ se tiene } f(F)^\ce\subset Y\). 
+\end{definition}
+\begin{proposition}
+   \(f\) es un homeomorfismo \(\Leftrightarrow\) \(f\) es biyectiva, continua y abierta \(\Leftrightarrow \ f\) es biyectiva, continua y cerrada.  
+\end{proposition}

@@ -1,0 +1,86 @@
+\section*{Sistemas de Vecindades}
+
+\begin{definition}
+    Sea \(X\) espacio topológico y \(U\subset X\), el conjunto \( U \in \U_x\) sii \(x\in \overset{\circ}{U}\). 
+\end{definition}
+\begin{proposition}
+    Las vecindades cumplen: \((a)\ \forall  U\in \U_x \text{ el punto } x\in U  ;  \ (b)\ U,V\in \U_x \Rightarrow U\cap V \in \U_x; \ (c)\ \forall  U\in \U_x, \exists    V \in \U_x, \forall y\in V \text{ se tiene } V \subset U \in \U_y; \ (d)\ \U_x \ni U\subset V\subset X\Rightarrow  V\in \U_x; \ (e) \ U^\ab\subset X \text{ sii } \forall x\in U \text{ se tiene } U\in \U_x \).  
+\end{proposition}
+\begin{note}
+    Un sistema de vecindades define una topología en \(X\) dada por \(\tau := \{U\subset X : \forall x \in U\text{ se tiene } U\in \U_x \} \). 
+\end{note}
+\begin{definition}
+    Una familia \(\mathcal{B}_x \subset \U_x\) es base de vecindades de \(x\text{ si } \forall  U \in \U_x,\exists  \mathcal{B}_x \ni V \subset U\).
+\end{definition}
+
+\E
+
+\hrule 
+\begin{example}
+    \(\mathcal{B}_x := \{U\in \U_x: U^\ab\subset X\}\). 
+\end{example}
+\begin{example}
+    En un espacio métrico \(\mathcal{B}_x:= \{B(x;r): r>0\}\) es base del sistema de vecindades de \(x\) \footnote{PD. Las bolas cerradas también.}.  
+\end{example}
+\hrule 
+
+\E
+
+\begin{proposition}
+    Una base de vecindades \(\mathcal{B}_x\) verifica: \((a)\ \forall  U\in \mathcal{B}_x \text{ el punto }x\in U; \ \ (b)\ U,V\in \mathcal{B}_x \Rightarrow  \exists W \in \mathcal{B}_x \text{ tal que } W \subset U\cap V;  \ \ (c)\ \forall U\in \mathcal{B}_x, \exists V, W \in \mathcal{B}_x,\forall y \in V \text{ se tiene } V \subset U\text{ y } \mathcal{B}_y \ni W\subset U ; \ (d)\  U^\ab\subset X \text{ sii } \forall x \in U, \exists V \in \mathcal{B}_x\text{ tal que } V\subset U\).  
+\end{proposition}
+\begin{note}
+    Un familia \(\mathcal{B}_x\) que verifique las propiedades \((a), \ (b)\ \text{y} \ (c)\) es una base para la topología \(\tau = \{U\subset X: \forall x\in U,\exists V \in \mathcal{B}_x \text{ tal que } V\subset U \}\). 
+\end{note}
+% \begin{proposition}
+    %Sea \(\mathcal{B}_x\) una familia  de subconjuntos de \(X\) que verifica: \((a)\ x\in U \text{ para cada } U\in \mathcal{B}_x; \ (b) \ U,V\in \mathcal{B}_x \text{ implica } \exists \mathcal{B}_x \ni W \subset U\cap V;\ (c) \ \text{ Dado }U\in \mathcal{B}_x \text{ existe }\mathcal{B}_x \ni V \subset U  \text{ tal que para toda } y\in V  \text{ existe } \mathcal{B}_y \ni W\subset U  \). 
+%    \[\tau = \{U\subset X: \text{ para cada }x\in U \text{ existe } V \in \mathcal{B}_x \text{ tal que } V\subset U \} \hspace{0.3cm} \text{y} \hspace{0.3cm} \mathcal{B}_x \text{ es una base de vecindades.}\]
+%\end{proposition}
+\begin{proposition}
+    Sea \(A\subset X\) e \(\mathcal{B}_x\) una base para la topología \(\tau\). Entonces: \((a)\ A^\ab \text{ sii } \forall x\in A,\exists V\in \mathcal{B}_x \text{ tal que } V\subset A; \ (b) \ A^\ce\) sii  \(\forall x\notin A, \exists V\in \mathcal{B}_x \text{ tal que } A\cap V= \emptyset; \ (c)\ \overline{A}=\{x\in X : \forall V \in \mathcal{B}_x \text{ se tiene } V\cap A \neq \emptyset \}; \ (d) \ \overset{\circ}{A} = \{x\in X: \exists V\in \mathcal{B}_x \text{ tal que } V\subset A \}. \)
+\end{proposition}
+\begin{definition}
+    \(X\) satisface el \emph{primer axioma de enumerabilidad} sii \(\forall x\in X,\exists \mathcal{B}_x \) enumerable. 
+\end{definition}
+
+\E
+
+\hrule
+\begin{example}
+    Todo espacio métrico satisface el primer axioma de enumerabilidad.
+\end{example}
+\hrule 
+
+\E
+
+\section*{Bases to Abiertos}
+
+\begin{definition}
+    Sea \((X,\tau)\). Una familia \(\mathcal{B}\subset \tau \) es base sii \(\forall U^\ab\in \tau, \exists \mathcal{C}\subset \mathcal{B}\) tal que \(U=\displaystyle\bigcup \{V:V\in \mathcal{C}\}\). 
+\end{definition}
+
+\E
+
+\hrule 
+\begin{example}
+    \(\{(a,b)\}\)  en la topología usual de \(\R\). 
+\end{example}
+\begin{example}
+    \(\{\{x\}: x\in X\}\) para la topología discreta. 
+\end{example}
+\hrule 
+
+\E
+
+\begin{proposition}
+    \(\mathcal{B}\) es base sii \(\mathcal{B}_x = \{V\in \mathcal{B}: x\in V\}\) es una base de vecindades de \(x\). 
+\end{proposition}
+\begin{proposition}
+    \emph{Base Juliana.} Sea \(X\) un conjunto y \(\mathcal{B}\) un familia de subconjuntos de \(X\) tal que: \((a) \ X = \displaystyle \bigcup \{V:V\in \mathcal{B}\}\);  \((b) \ \forall U,V \in \mathcal{B} \text{ si } x\in U\cap V \text{ entonces } \exists\underset{\underset{x}{\rotatebox{90}{$\in$}}}{W} \in  \mathcal{B} \text{ tal que }  W\subset U\cap V\). El conjunto \(\mathcal{B}\) es base para la topología, 
+    \vspace{-0.2cm} 
+    \[\tau = \left\{U : U = \bigcup\left\{ V:  V\in \mathcal{C} \right\} \text{ con } \mathcal{C}\subset \mathcal{B}\right\}.\] 
+\end{proposition}
+\begin{definition}
+    \(X\) satisface el \emph{segundo axioma de enumarabilidad} si \(\exists \mathcal{B}\) enumerable para la topología. 
+\end{definition}
+

@@ -1,0 +1,57 @@
+\section*{Aula 27/03/25}
+
+\begin{theorem}
+    Sea \(K\subseteq \R^n\) y \(f:K\to \R\) continua, entonces \(f\) tiene máximo y mínimo global en \(K\). 
+\end{theorem}
+\begin{note}
+    Podemos agregar condiciones para que funcione aún en conjuntos no compactos. 
+\end{note}
+
+\E
+
+\hrule
+\begin{example}
+    Sea \(f(x,y) = \frac{x}{x^2 + (y-1)^2 + 4 }\). Estudie máximos y mínimos de \(f\) en \(Q = \{(x,y) : x\geq 0 \text{ y } y\geq 0\}\). 
+\end{example}
+\hrule 
+
+\E
+
+\begin{proposition}
+    Sea \(F^\ce\subseteq \R^n\) no acotado y \(f:F\to \R^n\) continua. Tenemos (i) Si \(f(x)\to \infty \) cuando \(\|(x,y)\|\to \infty \), entonces \(f\) tiene un mínimo global y (ii) Si \(f(x) \to 0\) cuando \(\|(x,y)\|\to \infty\), entonces \(f\) tiene un máximo global. 
+\end{proposition}
+
+\subsection*{Problems with Constraints - Optimización}
+
+El objetivo aquí es mínimizar o máximizar funciones en conjuntos de la forma \(H = \{x\in \R^n: g(x)=0\}\). Si \(g\in C^k\) entonces \(H\) es una hipersuperficie de clase \(C^k\) definida por la ecuación \(g(x)=0\). 
+
+\E
+
+\hrule 
+\begin{example}
+    \(\mathbb{S}^{n-1} = \{x\in \R^n: \|x\| = 1\}\) definida por \(\left(\sum x_i^2\right) - 1 = 0 \). 
+\end{example}
+\begin{exercise}
+    Verifique bajo que condiciones \(p\in \mathbb{S}^{n-1}\) implica \(dg(p)\neq 0\). 
+\end{exercise}
+\begin{note}
+    La condición encontrada en el ejercicio anterior es garantía de que \(H\) es una variedad de clase \(C^k\) (sin singularidades) y que el espacio tangente de \(H\) en \(p\) es \(T_pH=\ker(dg(p))=\{v\in \R^n: dg(p)\cdot v = 0\}\).  
+\end{note}
+\begin{example}
+    Máximos y mínimos de \(f(x,y) = x^2+y^2+y\) en el disco \(D=\{(x,y):x^2+y^2 \leq 1 \}\). Hint: Lagrange?. 
+\end{example}
+\hrule 
+
+\E
+
+\begin{theorem}
+    \emph{Multiplicadores de Lagrange.} Sea \(f:U^\ab\subseteq \R^n\to \R\) de clase \(C^2\) y \(H=\{x\in \R^n: g(x)=0\}\) una superficie de clase \(C^1\) contenida en \(U\). Si \(p\in U\) es extremo local de \(H_H: H\to \R\), entonces \(\exists \lambda \in \R\) tal que \(df(p) =\lambda dg(p)\).   
+\end{theorem} 
+
+\E
+
+\hrule
+\begin{exercise}
+    Demuestre el Teorema espectral vía Multiplicadores de Lagrange.     
+\end{exercise}
+\hrule 

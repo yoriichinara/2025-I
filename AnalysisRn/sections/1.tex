@@ -1,0 +1,74 @@
+\section*{Aula 06/03/25}
+
+\begin{definition}%[\textbf{Derivada Direccional}] 
+    \textit{Derivada Direccional.} Sea \(U^{ab}\subseteq \R^n \) y \(f:U\rightarrow \mathbb{R}\) una función escalar. Para \(\vec{v}\in \mathbb{R}^n\) y \(p\in U\) definimos la derivada de \(f\) con dirección \(v\) en el punto \(p\) como:
+    \begin{equation*}
+    \frac{\partial f}{\partial v}(p) := \lim\limits_{h\to 0} \frac{f(p+hv) - f(p)}{h} \hspace{0.3in} \sim \hspace{0.3in} f(x+hv) = f(p) + \frac{\partial f }{\partial v}(p)\cdot h + \sigma(h) \ \footnote{Si existe \(\alpha \in \R \) tal que \(f(p+hv) = \alpha h + \sigma(h)\), entonces \(\frac{\partial f }{\partial v}(p) = \alpha\).}.
+    \end{equation*}
+    Si \(v = e_i\) entonces la llamamos $i$-ésima derivada o \textit{derivada parcial} y la denotamos por \(\frac{\partial f}{\partial x_i}(p)\). 
+  \end{definition}
+
+\vspace{0.2in}
+
+\hrule
+  \begin{example}
+    \(f:\R^2\rightarrow \R \) dada por \(f(\textbf{x}) = \|\textbf{x}\|^2\). Hint: \(\alpha\).  
+  \end{example}
+  \begin{exercise}
+    Sean \(\lambda\in \R\) y \(\vec{v},\vec{\omega} \in \R^n\). Muestre que \(\frac{\partial f }{\partial \lambda v} (p) = \lambda \frac{\partial f }{\partial v}(p)\). ¿Vale en general \(\frac{\partial f }{\partial (v+\omega)}(p) = \frac{\partial f }{\partial v}(p) + \frac{\partial f }{\partial \omega}(p )\)? 
+  \end{exercise}
+  \begin{example}
+    \(g :\R^2\backslash\{0\}\rightarrow \R\) tal que \(g(x,y) = \arctan (y/x)\). Hint: voleo. 
+  \end{example}
+  \hrule 
+
+ \vspace{0.2in}
+
+  \begin{note}
+    En un punto, la existencia de todas las derivadas parciales no implica que exista la derivada en toda dirección y tampoco implica continuidad de \(f\) en \(p\). 
+  \end{note}
+
+\vspace{0.2in}
+
+  \hrule
+  \begin{example}
+    \(\displaystyle f : \R^2\rightarrow \R\) dada por \(\displaystyle f(x) = \begin{cases}
+      x+y, &\text{si\ }x=0\ \text{o}\ y=0\\
+      0, &\text{e. o. c.}
+    \end{cases}\). Hint: direcciones. 
+  \end{example}
+  \begin{example}
+    \(\displaystyle f:\R^2\rightarrow \R\) dada por \(\displaystyle f(x) = \begin{cases}
+      \frac{xy^2}{x^2+y^2}, &\text{si\ }(x,y)=0\\
+      0, &\text{e. o. c.}
+    \end{cases}\). Hint: continuidad. 
+  \end{example}
+  \begin{exercise}
+    Muestre que la existencia de derivadas parciales acotadas en todo punto \(p\in U\) implica \(f\) constante en \(U\). 
+  \end{exercise}
+  \hrule
+
+  \vspace{0.2in}
+
+  \begin{definition} 
+    \textit{Conexidad.} Sea \(X^{ab}\subseteq \R^n\), \(X\) es conexo sii no existen \(U^{ab},V^{ab}\subseteq \R^n\) disjuntos, tales que su intersección con \(X\) es no vacía y \(X\subseteq U\cup V\). 
+  \end{definition}
+
+\vspace{0.2in}
+
+  \hrule 
+  \begin{proposition}
+    \textbf{Ejercicio} \ Sea \(U^{ab}\subseteq \R^n\) conexo. Dados \(p,q\in U\) existe un camino polígonal en \(U\) con vértices
+    \[p = p_0, p_1, \ldots, p_k = q,\]
+    tal que \(p_{i+1}- p_i\) es colineal con algún \(e_j\) para cada \(0\leq i\leq k-1\) y algún \(j \in \{1,\ldots,n\}\). \footnote{El lema solo vale cuando \(U\) es abierto, piense en \(\mathds{S}^1\).\vspace{0.5in}}
+  \end{proposition}
+  \hrule 
+
+\vspace{0.2in}
+
+
+  \begin{proposition}
+    Sea \(U^{ab}\subseteq \R^n\) conexo y \(f:U\rightarrow \R\) una función tal que \(\frac{\partial f}{\partial x_i} = 0\) en \(U\) para cada \(1\leq i\leq n\), entonces \(f\) es constante.  
+  \end{proposition}
+
+  \vspace{0.2in}

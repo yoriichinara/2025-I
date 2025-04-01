@@ -1,0 +1,83 @@
+\section*{Aula 13/03/25}
+\-\hrule 
+\begin{example}
+    \(f(\textbf{x}) = \|x\|^2\). Hint: separe y contemple. 
+\end{example}
+\begin{exercise}
+    El diferencial de una función lineal es él mismo. 
+\end{exercise}
+\hrule
+
+\vspace{0.2in}
+
+\begin{proposition}
+    Si \U{f}{n}{} es diferenciable en \(p\) entonces es continua en \(p\). 
+\end{proposition}
+
+\vspace{0.2in} 
+
+\hrule 
+\begin{example}
+    \(\displaystyle f(x,y) = \begin{cases}
+        \frac{xy^2}{x^2+y^2}, \ &\text{si} \ (x,y)\neq 0 \\
+        0, \ &\text{e. o. c.}
+    \end{cases}\). Hint: verifique derivadas, analice si \(f(v) = \sigma(\|v\|)\). \footnote{Si la derivada direccional en un punto no es lineal (coordenadas \(v_i\)) entonces el diferencial en ese punto no existe. }
+\end{example}    
+\begin{exercise}
+    Estudie la diferenciabilidad de \(\displaystyle f(x,y) = \begin{cases}
+        \frac{xy^3}{x^2+y^2}, \ &\text{si}\ (x,y)\neq 0 \\
+        0, \ &\text{e.o.c}
+    \end{cases}\)
+\end{exercise}
+\hrule 
+
+\vspace{0.2in} 
+
+\begin{note}
+    Existencia de derivadas direccionales NO implica diferenciabilidad. 
+\end{note}
+\begin{theorem}
+    Si \U{f}{n}{} es de clase \(C^1(U)\) entonces es diferenciable en cada punto de \(U\).\footnote{\(C^1 \Rightarrow C^0 \land \exists \frac{\partial f}{\partial v}\). }
+\end{theorem}
+
+\vspace{0.2in} 
+
+\hrule 
+\begin{example}
+    Toda función polinomial es diferenciable. 
+\end{example}
+\begin{example}
+    La proyección $i$-ésima \(x_i: \R^n\rightarrow \R\) es diferenciable. Además, puesto que es lineal \(dx_i(p) = x_i \) para cada \(p\in \R^n\). En particular notamos que \(dx_i(p)\cdot e_j = \delta_{ij}\), osea que \(\{dx_1(p), \ldots,dx_n(p)\}\) es una base para \({(\R^n)}^*\) \emph{(espacio dual)}\footnote{\(dx_i\) mide los incrementos de las variables independientes y los relaciona con los de la variable dependiente, osea \(df\).}. Suponiendo que pasa para cada \(p\in U\) el diferencial de \(f\) se escribe de forma única como 
+    \[df = \sum_{i=1}^n \frac{\partial f }{\partial x_i} dx_i. \]
+\end{example}
+\begin{example}
+    \(\Theta(x,y) = \arctan (y/x) \) definida para \((x,y)\neq 0\). Hint: Cálcule e interprete \(d\Theta\). 
+\end{example}
+\begin{proposition}
+    \textbf{Ejercicio} \ Si \U{f,g}{n}{} son diferenciables, entonces \(f+g,\ fg\) y \(f/g\) (para \(g\neq 0\) en \(U\)) son funciones diferenciables en \(U\) y 
+    \[d(f+g) = df + dg\ \ ;\ \ d(fg) = f\cdot dg + df\cdot g\ \ ; \ \ d\left(\frac{f}{g}\right) = \frac{df\cdot g - f\cdot dg}{g^2}\] 
+\end{proposition}
+\hrule 
+
+\vspace{0.2in}
+
+\begin{definition}
+    \textit{Gradiente.} El gradiente de una función diferenciable en \(p\) es el vector compuesto por las derivadas parciales,
+    \[\nabla f(p) := \left(\frac{\partial f}{\partial x_1}(p),\ldots,\frac{\partial f}{\partial x_n}(p)\right). \]
+\end{definition}
+
+\begin{note}
+    Interpretando la definición tenemos que \(\langle \nabla f , v\rangle = \frac{\partial f }{\partial v}\). En este sentido sea \(\vec{u}\in \R^n\) un vector unitario, entonces 
+    \[\Big|\frac{\partial f}{\partial u}(p)\Big| = |\langle \nabla f (p), u\rangle| \leq \|\nabla f(p)\|\|u\|,\]
+    es decir, el gradiente apunta en la dirección de mayor crecimiento de \(f\) en \(p\).\footnote{Esta es la base de lo que se conoce como método del gradiente, para minimizar una función.} 
+\end{note}
+
+\vspace{0.2in}
+
+\hrule 
+\begin{exercise}
+    Muestre que si \U{f}{n}{} es diferenciable y \(f(p)\) es un extremo local, entonces \(\nabla f (p) = 0\).  
+\end{exercise}
+\hrule 
+
+\vspace{0.2in}

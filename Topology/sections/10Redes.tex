@@ -1,0 +1,95 @@
+\section*{Convergencia}
+
+\begin{definition}
+    Sea \(X\) espacio métrico. \(X\supset (x_n) \to x \in X\) sii \(\forall \epsilon >0,\exists n_0\in \N, \forall n\geq n_0 \) tenemos \(d(x_n,x)<\epsilon\). 
+\end{definition}
+\begin{proposition}
+    Sea \(A\subset X\) e \(x\in X \). El punto \(x\in \overline{A}\) sii \( \exists(x_n) \subset A\) tal que \((x_n)\to x\). 
+\end{proposition}
+\begin{proposition}
+    Sea \(f:X\to Y \). La función \(f\) es continua en \(a \) sii \(\forall (x_n) \to a \in X\) se tiene \((f(x_n)) \to f(a) \in Y\). 
+\end{proposition}
+\begin{definition}
+    Sea \(X\) espacio topológico. \((x_n)\to x \in X\) sii \(\forall U\in \U_x,\exists n_0\in \N\) tal que \(\forall n\geq n_0\) la sucesión \((x_n)\subset U\) \footnote{La definición es equivalente al tomar \(\B_x\) en lugar de \(\U_x\). }.  
+\end{definition}
+\begin{definition}
+    \((x_{n_k})\) es una \emph{subsucesión} de \((x_n)\) siempre que \((n_k)\subseteq \N\) sea estrictamente creciente. 
+\end{definition}
+
+\subsection*{Redes}
+
+\begin{definition}
+    \((\Lambda,\leq) = \Lambda\) es un \emph{conjunto dirigido} si verifica: 
+    \begin{itemize}
+        \item \(\forall \lambda \in \Lambda, \ \lambda\leq \lambda\). 
+        \item \(\forall \lambda,\mu, \nu\in \Lambda \) si \(\lambda \leq \mu\) y \(\mu\leq \nu\), entonces \(\lambda\leq \nu\). 
+        \item \(\forall \lambda,\mu \in \Lambda, \exists \nu\in \Lambda\) tal que \(\lambda\leq \nu\) y \(\mu\leq \nu\). 
+   \end{itemize}
+\end{definition}
+
+\E
+
+\hrule 
+\begin{example}
+    \(\N\) con el orden usual es dirigido. 
+\end{example}
+\hrule 
+
+\E
+
+\begin{definition}
+    Sea \(X\) espacio topológico y \(x:\Lambda\to X\). Llamamos \emph{red} a la imagen \(x(\Lambda) = (x_\lambda)\subset X \). Decimos que \((x_\lambda) \to x \in X\) sii \(\forall U \in \U_x,\exists \lambda_0\in \Lambda, \forall \lambda \geq \lambda_0\) tenemos \((x_\lambda)\subset U\).   
+\end{definition}
+
+\E
+
+\hrule 
+\begin{example}
+    Las sucesiones son un tipo particular de redes.   
+\end{example}
+\begin{example}
+    Sean \(x\in U \) e \(x_U\in U\in \U_x\), entonces \(X\ni x\leftarrow(x_U)\subset X\) es una red.   
+\end{example}
+\hrule
+
+\E
+
+\begin{proposition}
+   Sea \(x\in A\subset X\). El punto \(x\in \overline{A}\) sii \(\exists (x_\lambda) \subset A \) tal que \((x_\lambda)\to x\).   
+\end{proposition}
+\begin{proposition}
+    \(f:X\to Y\) es continua en \(a\) sii \(\forall (x_\lambda)\subset X\) tal que \((x_\lambda)\to a\in X\) se tiene \((f(x_\lambda)) \to f(a)\in Y \). 
+\end{proposition}
+\begin{proposition}
+    Sea \(X=\prod X_i\). La red \((x_\lambda)\to x\in X\) sii \(\forall i \in I\) tenemos \((\pi_i(x_\lambda)) \to \pi_i(x)\in X_i\).   
+\end{proposition}
+\begin{definition}
+    Sea \((x_\lambda)\subset X \). Un punto \(x\in X\) es de \emph{acumulación} en \((x_\lambda)\) sii \(\forall U\in \U_x,\lambda_0\in \Lambda, \exists \lambda\geq \lambda_0 \) tal que \(x_\lambda\in U\). 
+\end{definition}
+\begin{definition}
+    Sean \(X\) e \(x:\Lambda \to X\) una red. Llamamos \emph{subred} a cualquier red de la forma \(x\circ\phi: M\to X\) denotada \((x_{\phi(\mu)})\) tal que \(\phi: (M,\leq) \to \Lambda\) es una función que verifica, 
+    \begin{itemize}
+        \item \(\mu_1\leq \mu_2 \Rightarrow \phi(\mu_1)\leq\phi(\mu_2). \)
+        \item \(\forall \lambda\in \Lambda, \exists \mu\in M\) tal que \(\phi(\mu)\geq \lambda \). 
+    \end{itemize}
+\end{definition}
+\begin{proposition}
+    Sea \((x_\lambda)\subset X \). El punto \(x\in X \) es de acumulación sii \(\exists (x_{\phi(\mu)}) \to x\in X\). 
+\end{proposition}
+\begin{definition}
+    La red \((x_\lambda)\subset X\) es \emph{red universal} si \(\forall A\subset X,\exists \lambda_0\in \Lambda,\forall \lambda\geq\lambda_0\) se tiene que \((x_\lambda)\subset A\) o \((x_\lambda)\subset X\setminus A\). 
+\end{definition}
+
+\E
+
+\hrule  
+\begin{example}
+    Toda red constante es universal.   
+\end{example}
+\hrule
+
+\E
+
+\begin{proposition}
+    Sea \((x_\lambda)\subset X\) red universal e \(x\) punto de acumulación, entonces \((x_\lambda)\to x\). 
+\end{proposition}

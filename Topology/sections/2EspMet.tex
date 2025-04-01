@@ -1,0 +1,57 @@
+\section*{Espacios Métricos}
+
+\begin{definition}
+    \emph{Métrica.} Una función \(d:X\times X\to \mathbb{R}^+\) es métrica si \(\forall x,y,z \in X\)  
+    \begin{itemize}
+        \item \(d(x,y)\geq 0\) e \(d(x,y)=0\) si y solo si \(x = y\). 
+        \item \(d(x,y) = d(y,x)\). 
+        \item \(d(x,y) \leq d(x,z) + d(z,y)\). 
+    \end{itemize}
+\end{definition}
+
+\E
+
+\hrule 
+\begin{example}
+    Las métricas estándar en \(\R^n\) inducidas por las normas \(\|\cdot\|_j\) con \(j = 1, 2 \text{\ y\ }\infty\). 
+\end{example}
+\begin{example}
+    Métrica discreta y métrica inducida. 
+\end{example}
+\hrule 
+
+\E
+
+\begin{definition}
+    \emph{Bola abierta} \(\ \to B(a;r) := \{x\in X : d(x,a) < r\}\); \ \emph{Bola cerrada} \(\ \to B[a;r]:= \{x\in X : d(x,a)\leq r\}\). 
+\end{definition}
+\begin{definition}
+   \(\U^\ab \subset X\) sii \(\forall x\in \U, \exists r>0\) tal que \(B(x;r)\subseteq \U\). En contraposición, \(\F^\ce\subset X \) sii \(X\backslash \F\) es abierto. 
+\end{definition}
+
+\E
+
+\hrule 
+\begin{exercise}
+    Las bolas abiertas son abiertos y las cerradas son cerradas en \(X\). 
+\end{exercise}
+\hrule 
+
+\E
+
+\begin{proposition}
+    Sea \(X\) un espacio métrico, entonces: \((a)\) \(\emptyset\text{ y } X\) son abiertos; \((b)\) Unión de una familia arbitraria de abiertos es abierto y \((c)\) Intersección de una familia finita de abiertos es abierto. 
+\end{proposition} 
+\begin{note}
+    Colorario de esto es la contra-versión para cerrados. 
+\end{note}
+\begin{definition}
+    \emph{Continuidad.} Sean \(X\text{\ y\ }Y\) espacios métricos. Una función \(f:X\to Y\) es continua en \(a\in X\) sii \(\forall\epsilon >0,\exists \delta >0\) tal que \(f(B(a;\delta))\subset B(f(a);\epsilon)\). 
+\end{definition}
+\begin{proposition}
+    \(f:X\to Y\) es continua en \(a\in X\) sii \(\forall\ \overset{\overset{\text{$f(a)$}}{\rotatebox{-90}{$\in$}}}{V^\ab}\subset Y, \exists \ \overset{\overset{\text{$a$}}{\rotatebox{-90}{$\in$}}}{U^\ab}\subset X\) tal que \(f(U)\subset V\). 
+\end{proposition}
+\begin{proposition}
+    \(f\) es continua \(\Leftrightarrow \ \forall \ V^\ab\subset Y\) tenemos \(f^{-1}(V)^\ab \subset X\) \(\Leftrightarrow \ \forall \ F^\ce\subset Y\) tenemos \( f^{-1}(F)^\ce \subset X\). 
+\end{proposition}
+

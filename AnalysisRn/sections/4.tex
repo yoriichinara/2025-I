@@ -1,0 +1,112 @@
+\section*{Aula 18/03/25}
+
+\begin{proposition}
+    Sean \(f:U^{ab} \rightarrow \R \), \(p\in U\) y \(\vec{v} \in \R^n\) tales que \([p,p+v]\subseteq U\). Considere \(\varphi(t) = f(p+tv)\). Si para algún \(t\in (0,1)\) \(f\) es diferenciable en \(p+tv\) entonces \(\varphi\) es diferenciable en \(t\) y \(\varphi\prime (t) = df(p+tv)\cdot v= \frac{\partial f }{\partial v} (p+tv)\). 
+\end{proposition}
+\begin{note}
+    TVM implica que si \(f\) es continua en \([p,p+v]\) y diferenciable en \((p,p+v)\) entonces existe \(\theta \in (0,1)\) tal que \(f(p+v)-f(p)= df(p+\theta v )\cdot v = \frac{\partial f}{\partial v}(p+\theta v)\). 
+\end{note}
+\begin{definition}
+    Sea \(\ell: R^n\rightarrow \R\) un operador lineal. La norma del operador \(|\ell | := \sup \|\ell v\| \text{ tales que } v\in \mathbb{S}^n\).  
+\end{definition}
+
+\E
+
+\hrule
+\begin{proposition}
+    \textbf{Ejercicio} Muestre que \(\exists \vec{w}\in \R^n\) tal que \(\ell v = \langle w, v \rangle \). 
+\end{proposition}
+\hrule 
+
+\E 
+
+\begin{note}
+    Del ejercicio resulta inmediato que \(|\ell | = \|w\|\). En particular, si \(f\) es diferenciable en \(p\), entonces \(|df(p)|= \|\nabla f (p)\|\). 
+\end{note}
+\begin{proposition}
+   Sea \(K\subset U\) dominio convexo diferenciable de \(f\) y \( c\geq 0 \) tal que \(\|df(x)\|\leq c\) para cada \(x\in K\). Entonces para cada \(p,q\in K \) vale que \(\|f(p)-f(q)\|\leq c \|p-q\|\). 
+\end{proposition}
+\begin{definition}
+    \(f:X\subset \R^n\rightarrow \R \) es \emph{Lipschitz continua} si existe \(c\geq 0\) tal que \(\|f(p)-f(q)\|\leq c \|p-q\|\) para cada \(p,q \in X\). 
+\end{definition}
+\begin{note}
+    Osea que TVM también implica \(f\) Lipschitz. 
+\end{note}
+
+\E
+
+\hrule
+\begin{exercise}
+    Muestre que si \(f\in C^1(U)\) y \(K\) es compacto y convexo, entonces la hipótesís de la proposición anterior es automaticamente satisfecha para algún \(c\geq 0\). 
+\end{exercise}
+\hrule 
+
+\E
+
+\subsection*{Formula de Taylor}
+
+\begin{note}
+    La idea es aproximar funciones por polinomios, apuntando a una forma \(f(p+v) = P_k[v] + \Gamma_k[v]\). Un polinomio en variable \(v\) de orden \(k\) y un error del orden \(\sigma (\|v\|^k)\)
+\end{note}
+
+\E
+
+\hrule
+\begin{example}
+    Si \(f\in C^2\) entonces \( f(p+v) = \underbrace{f(p) + \sum \frac{\partial f }{\partial x_i}(p)v_i+ \frac{1}{2}\sum \frac{\partial f}{\partial x_i \partial x_j}(p) v_iv_j}_{P_2[v]} + \underbrace{\sigma(\|v\|^2)}_{\Gamma_2[v]}\)
+\end{example}
+\hrule 
+
+\E 
+
+\begin{definition}
+    Para \(k\geq 2\), decimos que \(f\) es \(k\)-diff en \(p\) si existe \(B(p;\epsilon)\) donde existe \(df(p)\) y \(\frac{\partial f }{\partial x_i}\) es \((k-1)\)-diff. 
+\end{definition}
+
+\E 
+
+\hrule 
+\begin{example}
+    \(f \in C^k(U)\)  implica que \(f\)  es \(k\)-diff en cada \(p\in U\). 
+\end{example} 
+\begin{exercise}
+    Muestre que el Teorema de Schwarz vale en general para funciones \(2\)-diff. Hint: Elon Musk. 
+\end{exercise}
+\hrule 
+
+\E
+
+\begin{definition}
+    Sea \(f\) una función \(k\)-diff en \(p\) y \(d^kf(p): \R^n \rightarrow \R\) tal que \(v\mapsto d^kf(p)v^{\otimes k} = \sum \frac{\partial^k f }{\partial x_{i_1}  \cdots \partial x_{i_k}}(p)v_{i_1}\cdots v_{i_k}\). \footnote{Función polinomial y homógenea de grado \(v_1\cdots v_k\)}
+\end{definition}
+
+\E \newpage 
+
+\hrule 
+\begin{example}
+    Para \(f:\R^2\rightarrow \R\) tenemos: \( d^2f(p)v^{\otimes 2} = \sum\frac{\partial^2 f}{\partial x^2}(p)h^2 + 2\sum \frac{\partial^2 f }{\partial x\partial y}(p)hk+ \sum\frac{\partial^2 f}{\partial y^2}(p)k^2\). \footnote{Una forma cuadrática de grado 2.} 
+\end{example}
+\hrule 
+
+\E
+
+\begin{definition}
+    Sea \(f\) \(2\)-diff en \(p\) entonces la Hessiana de \(f\) en \(p\) es \( Hf(p)= \left(\frac{\partial^2 f}{\partial x_i\partial x_j}(p)\right)_{i,j} =  \begin{pmatrix}
+        \frac{\partial^2 f }{\partial x_1^2}(p) & \cdots &  \frac{\partial^2 f }{\partial x_1 \partial x_n}(p) \\
+        \vdots & \ddots & \vdots \\
+        \frac{\partial^2 f }{\partial x_n \partial x_1}(p) & \cdots & \frac{\partial^2 f }{\partial x_n^2}(p)
+    \end{pmatrix}\)
+\end{definition}
+\begin{note}
+    \(Hf(p)\) es única (Schwarz) y símetrica que representa a \(d^2f(p)v^{\otimes k} = \langle Hf(p)\cdot v, v\rangle = \displaystyle \sum_{|\alpha|=2} \binom{2}{\alpha}\partial^\alpha f(p)v^\alpha. \)
+\end{note}
+
+\E 
+
+\hrule 
+\begin{exercise}
+    Muestre que si \(f\) es \(k\)-diff en \(p\) entonces \(d^kf(p)v^{\otimes k} =\displaystyle \sum_{|\alpha|=2} \binom{k}{\alpha}\partial^\alpha f(p)v^\alpha\). 
+\end{exercise}
+\hrule 
+ 
+
