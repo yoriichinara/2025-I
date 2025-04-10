@@ -1,0 +1,19 @@
+\section*{Aula 08/04/25}
+
+\begin{theorem}
+    Sean \(U^\ab \subseteq \R^n\) e \(V^\ab \subseteq \to \R^m\). Considere \(F: U\to R^m\) diferenciable, suponga también que \(F(U)\subseteq V\) y \(G:V\to \R^k\) diferenciable. Entonces \(G \circ F\) es diferenciable y \(D(G\circ F)(p) = DG(F(p))\cdot DF(p)\). 
+\end{theorem}
+
+\E
+
+\hrule 
+\begin{example}
+    Sea \(c:I\to\R^n\) e \(f:\R^n\to \R\), entonces \(D(f\circ c )(t) = Df(c(t))\cdot Dc(t) = df(c(t)) \cdot c'(t) \). Si tomamos \(c(t) = p + tv\) e \(\varphi (t) = (f\circ c) (t)\) entonces \(\varphi'(t) = df(p+tv)\cdot v\). 
+\end{example}
+\hrule 
+
+\E
+
+\begin{note}
+    En versión matricial el Teorema queda \(J(G\circ F)(p) = JG(F(p))\cdot JF(p)\). 
+\end{note}

@@ -1,0 +1,85 @@
+\section*{Aula 03/04/25}
+
+\begin{definition}
+    Llamamos \emph{función vectorial} a una función \(F:U^\ab \subseteq \R^n \to \R^m\) cuyas componentes son funciones escalares \(F: x\mapsto (F_1(x), F_2(x), \ldots, F_m(x))\).  
+\end{definition}
+\begin{definition}
+    \(F\) es diferenciable en \(p\in U\) sii \(\exists L:\R^n\to\R^m\) lineal tal que \(F(p+v) = F(p) + Lv + \sigma (\|v\|)\) cuando \(v\to 0\). 
+\end{definition}
+\begin{note}
+    El resto \(r (v) = (r_1(v), r_2(v), \ldots, r_m(v)) = \sigma(\|v\|^k )\) sii \(\forall i \) se tiene que \(r_i(v) = \sigma(\|v\|^k)\).   
+\end{note}
+\begin{proposition}
+    \(F\) es diferenciable en \(p\) sii \(\forall i\) tenemos \(F_i\) diferenciable en \(p\) e \(L_i = dF_i(p)\).  
+\end{proposition}
+
+\E
+
+\hrule 
+\begin{exercise}
+    Pruebe \((\Leftarrow) \) de la proposición anterior. 
+\end{exercise}
+\hrule 
+
+\E
+
+\begin{definition}
+    Si \(F\) es diferenciable en \(p\) entonces \(\exists ! DF(p): \R^n\to \R^m \) lineal a la que llamamos \(derivada\) de \(F\) en \(p\), la cual verifica \(F(p+v)= F(p) + DF(p)v + \sigma(\|v\|)\) cuando \(v\to 0\). 
+\end{definition}
+\begin{note}
+    En resumén \(DF(p) = (dF_1(p), dF_2(p), \ldots, dF_m(p))\).  
+\end{note}
+
+\E
+
+\hrule
+\begin{example}
+    Si \(F\) es afín, digamos \(F(x) = Lx + b\) entonces \(DF(p) = L \). En efecto \(F(p+v)= (Lp + b) + Lv + 0\). 
+\end{example}
+\begin{proposition}
+    Si \(F\) es diferenciable en \(p\) entonces es continua en \(p\).  
+\end{proposition}
+\hrule 
+
+\E 
+
+\begin{definition}
+    \emph{Derivada Direccional.} Sea \(v\in \R^n\) la derivada de \(F\) en dirección \(v\) se define como \(\frac{\partial F}{\partial v} = \lim\limits_{t\to 0} \frac{F(p+t)-F(p)}{t}\).  
+\end{definition}
+\begin{note}
+    En caso de existir \(\frac{\partial F}{\partial v} (p)= \left(\frac{\partial F_1}{\partial v}(p), \frac{\partial F_2}{\partial v}(p),\ldots,\frac{\partial F_2}{\partial v}(p) \right)\). Es todo análogo, incluyendo las derivadas parciales. 
+\end{note}
+\begin{definition}
+    \emph{Matriz Jacobiana.} Representa la derivada \(DF(p)\) en la base canónica. 
+    \[M_{m\times n}(\R) \ni JF(p) = \left(\frac{\partial F_i}{\partial x_j}(p)\right) \ \ \ 1\leq i\leq m, \ 1\leq j\leq n\ \footnote{En otra notación \(JF(p) = \frac{\partial (F_1,F_2,\ldots,F_m)}{\partial (x_1,x_2, \ldots , x_n)}(p)\).}. \] 
+\end{definition}
+\begin{note}
+    Las filas de \(JF(p)\) son \(dF_i(p) \in M_{1\times n}(\R) \cong (\R^n)^*\)  mientras las columnas son vectores \(\left(\frac{\partial F}{x_j}\right) \in M_{m\times 1}(\R) \cong R^m\). 
+\end{note}
+
+\E
+
+\hrule
+\begin{example}
+    Si \(f:U \to \R\) entonces \(Jf(p) = (\nabla f)^T \in M_{1\times n} (\R)\).  
+\end{example}
+\begin{example}
+    Sea \(c:I = (a,b)\subset \R \to \R^m\) un camino diferenciable, es decir, \(c(t) = (c_1(t), c_2(t),\ldots, c_m(t))\). Tenemos \(Jc(t) = (c_1'(t), c_2'(t), \ldots, c_m'(t))^T \in M_{m\times 1}(\R)\cong \R^m\), el \emph{vector tangente}. 
+\end{example}
+\begin{example}
+    \(U = \{(r,\theta) : r>0, -\pi < \theta <\pi\}\) e \(F:U\ni (r,\theta) \mapsto (r\cos(\theta), r\sin(\theta))\). Hint: cálcule. 
+\end{example}
+\hrule 
+
+\E
+
+\begin{definition}
+    \(F:U\to \R^m\) es de clase \(C^k\) sii cada una de sus componentes es de clase \(C^k\). Denotamos \(F\in C^k(U;\R^m)\). 
+\end{definition}
+\begin{proposition}
+    Si \(F\in C^k(U;\R^m)\) entonces \(F\) es diferenciable en \(U\). 
+\end{proposition}
+
+\subsection*{Derivadas de orden superior}
+
+díficil 
